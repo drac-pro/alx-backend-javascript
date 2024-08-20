@@ -3,7 +3,7 @@
  * @param {string} message - The the message to print.
  */
 function displayMessage(message) {
-  process.stdout.write(`${message}\n`);
+  console.log(message);
 }
 
 module.exports = displayMessage;
