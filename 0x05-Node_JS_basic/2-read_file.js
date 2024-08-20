@@ -1,8 +1,8 @@
-const fs = require('node:fs');
+const fs = require('fs');
 
 /**
  * attempt to read the database file synchronously
- * @param {path} path - path to the database file
+ * @param {string} path - path to the database file
  */
 function countStudents(path) {
   try {
