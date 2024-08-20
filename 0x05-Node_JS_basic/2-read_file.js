@@ -7,7 +7,7 @@ const fs = require('node:fs');
 function countStudents(path) {
   try {
     const fileContent = fs.readFileSync(path, 'utf-8');
-    const lines = fileContent.trim().split('\n');
+    const lines = fileContent.toString().trim().split('\n');
     if (lines.length === 0) {
       throw new Error('Cannot load the database');
     }
