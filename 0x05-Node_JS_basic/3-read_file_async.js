@@ -1,7 +1,7 @@
 const fs = require('fs').promises;
 
 /**
- * attempt to asynchronously read the database file synchronously
+ * attempt to asynchronously read the database file
  * @param {string} path - path to the database file
  */
 async function countStudents(path) {
