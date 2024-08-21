@@ -23,6 +23,8 @@ async function countStudents(path) {
 
     for (let i = 1; i < lines.length; i += 1) {
       const line = lines[i];
+      // eslint-disable-next-line no-continue
+      if (!line.trim()) continue;
       const columns = line.split(',');
       const field = columns[fieldIndex];
       const firstName = columns[firstNameIndex];
@@ -55,9 +57,11 @@ const app = createServer(async (req, res) => {
       const data = await countStudents(process.argv[2].toString());
       res.end(`This is the list of out students\n${data}`);
     } catch (error) {
-      res.statusCode = 404;
-      res.end('Cannot load the database');
+      res.end('This is the list of our students\nCannot load the database');
     }
+  } else {
+    res.statusCode = 404;
+    res.end();
   }
 });
 
