@@ -55,13 +55,10 @@ const app = createServer(async (req, res) => {
   } else if (req.url === '/students') {
     try {
       const data = await countStudents(process.argv[2].toString());
-      res.end(`This is the list of out students\n${data}`);
+      res.end(`This is the list of our students\n${data}`);
     } catch (error) {
       res.end('This is the list of our students\nCannot load the database');
     }
-  } else {
-    res.statusCode = 404;
-    res.end();
   }
 });
 
