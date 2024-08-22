@@ -20,13 +20,13 @@ describe('calculateNumber', () => {
 
   describe('#DIVIDE', () => {
     it('check division of rounded numbers', () => {
-      assert.strictEqual(calculateNumber('DIV', 7.4, 2.4), 3.5);
-      assert.strictEqual(calculateNumber('DIV', -5.6, 2.1), -3);
+      assert.strictEqual(calculateNumber('DIVIDE', 7.4, 2.4), 3.5);
+      assert.strictEqual(calculateNumber('DIVIDE', -5.6, 2.1), -3);
     });
 
     it('check "Error" when dividing by 0', () => {
-      assert.strictEqual(calculateNumber('DIV', 1.4, 0.2), 'Error');
-      assert.strictEqual(calculateNumber('DIV', 7.0, 0), 'Error');
+      assert.strictEqual(calculateNumber('DIVIDE', 1.4, 0.2), 'Error');
+      assert.strictEqual(calculateNumber('DIVIDE', 7.0, 0), 'Error');
     });
   });
 });
