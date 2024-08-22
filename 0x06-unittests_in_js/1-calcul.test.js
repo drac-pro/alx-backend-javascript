@@ -18,7 +18,7 @@ describe('calculateNumber', () => {
     });
   });
 
-  describe('#DIV', () => {
+  describe('#DIVIDE', () => {
     it('check division of rounded numbers', () => {
       assert.strictEqual(calculateNumber('DIV', 7.4, 2.4), 3.5);
       assert.strictEqual(calculateNumber('DIV', -5.6, 2.1), -3);
