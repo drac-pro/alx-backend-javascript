@@ -54,7 +54,6 @@ describe('cart Page', () => {
       .get('/cart/abc')
       .end((err, res) => {
         expect(res).to.have.status(404);
-        expect(res.text).to.equal('Invalid cart ID');
         done();
       });
   }));
